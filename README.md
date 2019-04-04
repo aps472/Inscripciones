@@ -1,2 +1,2 @@
 # Inscripciones
-Proyecto que consiste en la elaboración de un sistema capas de dar alta, bajas y modificaciones a alumnos en cursos.
+Proyecto que consiste en la elaboración de un sistema capaz de dar alta, bajas y modificaciones a cursos y verificar en cuantos cursos está dado de alta un alumno.
