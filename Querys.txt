@@ -1,0 +1,14 @@
+[Archivo generado por Jovany Hernández]
+
+Querys necesarios para cada caso (mysql) (php):
+
+Para inicio de sesión.
+- Buscar usuario por usuario y contraseña: select *from usuarios where id = @id and password = @password;
+
+Para darse de alta en cursos.
+- Obtener todos los cursos: select *from cursos where fecha_termino >= @fecha_actual;
+- Registrarse a un curso: insert into cursos_usuarios (valor1... valn) values (@valor1... @valn);
+
+Para ver cursos en los que se está inscrito.
+- Obtener cursos de usuario: select *from cursos_usuario where id_usuario = @id_usuario;
+- Eliminar curso al que esté inscrito: delete from cursos_usuarios where id_curso = @id_curso and id_usuario = @id_usuario.
