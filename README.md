@@ -2,16 +2,16 @@
 Proyecto que consiste en la elaboración de un sistema capaz de dar alta, bajas y modificaciones a cursos y verificar en cuantos cursos está dado de alta un alumno.
 ## Conexión al servidor
 
-Server **(host)**: sql3.freemysqlhosting.net
+$server = "geoconstructor.com";
 
 &nbsp;
-Name **(db)**: sql3286415
+$db = "geoconst_APS";
 
 &nbsp;
-Username **(user)**: sql3286415
+$user = "geoconst_aps";
 
 &nbsp;
-Password **(pass)**: 8tCPfqS5UG
+$pass = "Latimusdarken123";
 
 &nbsp;
 Port number: 3306
