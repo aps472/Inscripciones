@@ -1,4 +1,5 @@
 <?php 
+
 	$server = "geoconstructor.com";
 	$user = "geoconst_aps";
 	$pass = "Latimusdarken123";

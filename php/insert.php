@@ -1,39 +1,26 @@
 <?php 
-	include ("connection.php");
 
+	//Aquí tenemos las variables para la conexion al servidor MySQL
+	include 'connection.php';
+
+	//Iniciamos una conexión orientada a objetos
 	$conn = new mysqli($server,$user,$pass,$db) or die ("Error al conectar con la base de datos");
 
+	//Recibimos por metodo POST el array checkbox del archivo Altas.php
 	$checkbox = $_POST['checkbox'];
+
+	//Esta variable solo define que usuario 
+	//(matícula o id) es quien está dentro de la sesión
 	$user_id = 1;
-	//$sql = "INSERT INTO  (name) VALUES ('Manuel')";
-	
-	/*if ($conn->query($sql) === TRUE) {
-		echo "Grabado Exitosamente";
-	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}*/
-	//"INSERT INTO cual_tb WHERE id_usuario = '$user_id' SET id_curso = '$valor' ";
-	
-	/*foreach ($checkbox as $key => $value) {
-		$sql = "INSERT INTO cual_tb SET id_usuario = '$user_id', id_curso = '$value' ";
-		$excute = mysqli_query($conn, $sql);
-	}*/
 
-
+	//De cada indice obtenemos el "value" 
 	foreach ($checkbox as $key => $value) {
 		$sql = "INSERT INTO cual_tb (id_usuario, id_curso) VALUES ($user_id, $value)";
 		$conn->query($sql);
 	}
 
+	//Cerramos conexión
 	$conn->close();
-
-	/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$name = test_input($_POST["name"]);
-		$email = test_input($_POST["email"]);
-		$website = test_input($_POST["website"]);
-		$comment = test_input($_POST["comment"]);
-		$gender = test_input($_POST["gender"]);
-	}*/
 
 	//Función para validar campos
 	function test_input($data) {
@@ -42,4 +29,14 @@
 		$data = htmlspecialchars($data);
 		return $data;
 	}
+
+	//Ejemplo de funcion para validar campos
+
+	/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$name = test_input($_POST["name"]);
+	$email = test_input($_POST["email"]);
+	$website = test_input($_POST["website"]);
+	$comment = test_input($_POST["comment"]);
+	$gender = test_input($_POST["gender"]);
+	}*/
 ?>
