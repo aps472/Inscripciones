@@ -20,4 +20,5 @@
 
 	//Cerramos conexión
 	$conn->close();
+	header("Location:../Bajas.html");
  ?>
