@@ -6,9 +6,9 @@
 
 	<meta charset="UTF-8">
 
-	<title>Bajas</title>
+	<title>Altas</title>
 
-	<link href="../css/bootstrap.css" rel="stylesheet" />
+	<link href="../css/bootstrap.min.css" rel="stylesheet" />
 
 	<link href="../css/form-validation.css" rel="stylesheet" />
 
@@ -41,7 +41,7 @@
 
 				<li class="nav-item">
 
-					<a class="nav-link" href="registro.html">
+					<a class="nav-link active" href="#"> 
 
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
 
@@ -59,7 +59,7 @@
 
 				<li class="nav-item">
 
-					<a class="nav-link active" href="../cursos.php">
+					<a class="nav-link" href="../cursos.php">
 
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
 
@@ -154,67 +154,48 @@
 
 			<div class="col-md-8 order-md-1">
 
-				<h4 class="mb-3">Seleccione los cursos que desea dar de baja: </h4>
-				<form action="delete.php" method="POST">
+				<h4 class="mb-3">Registar en Curso</h4>
+
+
+				<form action="insert.php" method="POST">
 
 					<?php 
 
-					
+
 
 					include("connection.php");
 
-		$user_id = 1; //Usuario que está dentro de la sesión
-
-		$conn = new mysqli($server,$user,$pass,$db) or die ("Error al conectar con la base de datos");
 
 
-
-		$sql = "SELECT * FROM cual_tb WHERE id_usuario = $user_id"; //Este query es para ver a que cursos esta inscrito acutalmente el usuario
-
-		$result = $conn->query($sql);
+					$conn = new mysqli($server,$user,$pass,$db) or die ("Error al conectar con la base de datos");
 
 
 
-		while($row = $result->fetch_assoc()) {
+					$sql = "SELECT id,nombre_curso FROM cursos_tb";
 
-			$id = $row['id_curso']; //Tenemos que asignar en una variable para poder tratarla como un entero
+					$result = $conn->query($sql);
 
+					while($row = $result->fetch_assoc()) {
 
+						?>
 
-			//Con la variable "$id" sabremos a que cursos esta inscrito y podremos hacer el siguiente query a la tabla de cursos 
+						<input type="checkbox" name="checkbox[]" value="<?php print($row['id']); ?>" > <?php print utf8_encode ($row['nombre_curso']);?> <br>
 
-			//y solo mostraremos a los que sabremos que está inscrito
+						<?php
 
-			$nombre = $conn->query("SELECT nombre_curso FROM cursos_tb WHERE id = $id "); 
+					}
 
-			$row2 = $nombre->fetch_assoc();
+					$conn->close();
 
-			?>
+					?>
 
-			<input type="checkbox" name="checkbox[]" value="<?php 
+					<input type="submit" value="Aceptar">
 
-			//Aquí pondremos el valor que será la id del curso de la tabla "cual_tb"
+				</form>
 
-			print($id); ?>" > <?php 
-
-			//Aquí pondremos el nombre del curso pero de la tabla de cursos_tb
-
-			print utf8_encode ($row2['nombre_curso']);?> <br>
-
-			<?php
-
-		}
-
-		$conn->close();
-
-		?>
-
-		<input type="submit" value="Aceptar">
-
-	</form>
-</div>
-</div>
-</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

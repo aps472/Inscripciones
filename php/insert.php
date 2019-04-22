@@ -13,12 +13,16 @@
 	//(matícula o id) es quien está dentro de la sesión
 	$user_id = 1;
 
+
 	//De cada indice obtenemos el "value" 
 	foreach ($checkbox as $key => $value) {
-		$sql = "INSERT INTO cual_tb (id_usuario, id_curso) VALUES ($user_id, $value)";
-		$conn->query($sql);
+		$sqlQ = "SELECT id_curso FROM cual_tb WHERE id_curso= $value";
+		$result = $conn->query($sqlQ);
+		if(!($row = $result->fetch_assoc())){
+			$sql = "INSERT INTO cual_tb (id_usuario, id_curso) VALUES ($user_id, $value)";
+			$conn->query($sql);
+		}
 	}
-
 	//Cerramos conexión
 	$conn->close();
 
@@ -39,4 +43,5 @@
 	$comment = test_input($_POST["comment"]);
 	$gender = test_input($_POST["gender"]);
 	}*/
+	header("Location:../registro.html");
 ?>

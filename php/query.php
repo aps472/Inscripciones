@@ -1,7 +1,6 @@
 <?php 
-	include ("connection.php");
-	
 	function info(){
+		include ("connection.php");
 		$conn = new mysqli($server,$user,$pass,$db) or die ("Error al conectar con la base de datos");
 		$sql = "SELECT * FROM cursos_tb";
 		$result = $conn->query($sql);
