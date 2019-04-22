@@ -605,7 +605,7 @@ pre code {
 
 @media (min-width:1200px) {
     .container {
-        max-width: 1140px
+        max-width: 1400px
     }
 }
 
@@ -1191,8 +1191,8 @@ pre code {
 
     .col-md-8 {
         -ms-flex: 0 0 66.666667%;
-        flex: 0 0 66.666667%;
-        max-width: 66.666667%
+        flex: 0 0 100%;
+        max-width: 100%
     }
 
     .col-md-9 {
@@ -3363,7 +3363,7 @@ fieldset:disabled a.btn {
 
 .btn-block {
     display: block;
-    width: 100%
+    width: 20%
 }
 
 .btn-block+.btn-block {
