@@ -29,12 +29,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cursos.php">
+                    <a class="nav-link" href="Bajas.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
                             <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
                             <polyline points="13 2 13 9 20 9"></polyline>
                         </svg>
-                        Cursos
+                        Eliminar Curso
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cursos.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                            <polyline points="13 2 13 9 20 9"></polyline>
+                        </svg>
+                        Mis Cursos
                     </a>
                 </li>
                 <li class="nav-item">
@@ -71,26 +80,42 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 order-md-1">
-                <h4 class="mb-3">Registrar Usuario</h4>
-                <form class="needs-validation" novalidate="">
+                <h4 class="mb-3">Registrar Curso</h4>
+                <form action="php/insert.php" method="POST">
+                    <?php 
+                            include("php/connection.php");
+                            $user_id = 1;
+                            $cont = 0;
+                            $conn = new mysqli($server,$user,$pass,$db) or die ("Error al conectar con la base de datos");
+                            $sql = "SELECT id,nombre_curso FROM cursos_tb";
+                            $result = $conn->query($sql);
+                            while($row = $result->fetch_assoc()){
+                                $sqlU = "SELECT id_curso FROM cual_tb WHERE id_usuario= $user_id AND id_curso= $row[id]";
+                                $resultU = $conn->query($sqlU);
+                                $rowU = $resultU->fetch_assoc();
+                                if(!($rowU['id_curso'])){
+                        ?>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="curso1" value="curso1">
-                        <label class="custom-control-label" for="curso1">curso1</label>
+                        <input type="checkbox" class="custom-control-input" name="checkbox[]" id="<?php print($row['id']); ?>" value="<?php print($row['id']); ?>">
+                        <label class="custom-control-label" for="<?php print($row['id']); ?>">
+                            <?php print utf8_encode ($row['nombre_curso']); ?>
+                            <br>
+                        </label>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="curso2" value="curso2">
-                        <label class="custom-control-label" for="curso2">curso2</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="curso3" value="curso3">
-                        <label class="custom-control-label" for="curso3">curso3</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="curso4" value="curso3">
-                        <label class="custom-control-label" for="curso4">curso4</label>
-                    </div>
+                    <?php
+                                   }else{
+                                   $cont++;
+                                    }
+                                if($cont == 9){
+                                ?>
+                    <h4 class="mb-3">No se encuentran cursos disponibles</h4>
+                    <?php
+                                }
+                            }
+                                $conn->close();
+                                ?>
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Registar</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" value="Aceptar">Registar</button>
                 </form>
             </div>
         </div>
