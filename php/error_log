@@ -1,0 +1,47 @@
+[12-Apr-2019 01:13:26 America/Chicago] PHP Warning:  include(conection.php): failed to open stream: No such file or directory in /home/geoconst/public_html/APS/php/insert.php on line 2
+[12-Apr-2019 01:13:26 America/Chicago] PHP Warning:  include(): Failed opening 'conection.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/geoconst/public_html/APS/php/insert.php on line 2
+[12-Apr-2019 01:13:26 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/insert.php on line 4
+[12-Apr-2019 01:13:26 America/Chicago] PHP Fatal error:  Call to a member function query() on null in /home/geoconst/public_html/APS/php/insert.php on line 8
+[12-Apr-2019 01:14:04 America/Chicago] PHP Fatal error:  Call to a member function query() on null in /home/geoconst/public_html/APS/php/insert.php on line 8
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  include(conection.php): failed to open stream: No such file or directory in /home/geoconst/public_html/APS/php/query.php on line 2
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  include(): Failed opening 'conection.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/geoconst/public_html/APS/php/query.php on line 2
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/query.php on line 4
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/geoconst/public_html/APS/php/query.php on line 8
+[12-Apr-2019 11:29:07 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/geoconst/public_html/APS/php/query.php on line 11
+[12-Apr-2019 11:29:26 America/Chicago] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:29:26 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:29:26 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/geoconst/public_html/APS/php/query.php on line 8
+[12-Apr-2019 11:29:26 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/geoconst/public_html/APS/php/query.php on line 11
+[12-Apr-2019 11:29:28 America/Chicago] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:29:28 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:29:28 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/geoconst/public_html/APS/php/query.php on line 8
+[12-Apr-2019 11:29:28 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/geoconst/public_html/APS/php/query.php on line 11
+[12-Apr-2019 11:30:40 America/Chicago] PHP Warning:  mysql_select_db(): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/query.php on line 5
+[12-Apr-2019 11:30:40 America/Chicago] PHP Warning:  mysql_select_db(): A link to the server could not be established in /home/geoconst/public_html/APS/php/query.php on line 5
+[12-Apr-2019 11:30:40 America/Chicago] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:30:40 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:30:40 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/geoconst/public_html/APS/php/query.php on line 8
+[12-Apr-2019 11:30:40 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/geoconst/public_html/APS/php/query.php on line 11
+[12-Apr-2019 11:33:48 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/geoconst/public_html/APS/php/query.php on line 6
+[12-Apr-2019 11:33:48 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/geoconst/public_html/APS/php/query.php on line 8
+[12-Apr-2019 11:33:48 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home/geoconst/public_html/APS/php/query.php on line 11
+[12-Apr-2019 11:39:22 America/Chicago] PHP Parse error:  syntax error, unexpected '"Name: "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/geoconst/public_html/APS/php/query.php on line 9
+[12-Apr-2019 11:40:25 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home/geoconst/public_html/APS/php/query.php on line 11
+[12-Apr-2019 14:32:51 America/Chicago] PHP Fatal error:  Call to undefined method mysqli_stmt::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 15
+[12-Apr-2019 14:36:59 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 16
+[12-Apr-2019 14:37:06 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 16
+[12-Apr-2019 14:39:54 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 16
+[12-Apr-2019 14:43:21 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 17
+[12-Apr-2019 14:43:25 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 17
+[12-Apr-2019 14:48:37 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 17
+[12-Apr-2019 14:48:54 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 17
+[12-Apr-2019 14:49:00 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 17
+[12-Apr-2019 15:18:59 America/Chicago] PHP Fatal error:  Call to undefined method PDOStatement::fechALL() in /home/geoconst/public_html/APS/php/cursos.php on line 17
+[12-Apr-2019 16:59:12 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/geoconst/public_html/APS/php/insert.php on line 25
+[12-Apr-2019 17:00:59 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/geoconst/public_html/APS/php/insert.php on line 24
+[12-Apr-2019 17:02:53 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/geoconst/public_html/APS/php/insert.php on line 24
+[12-Apr-2019 17:03:38 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/geoconst/public_html/APS/php/insert.php on line 24
+[12-Apr-2019 17:08:40 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/geoconst/public_html/APS/php/insert.php on line 24
+[12-Apr-2019 17:26:10 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/geoconst/public_html/APS/php/insert.php on line 24

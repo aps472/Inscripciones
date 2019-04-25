@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+    <title>Inscripciones</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/form-validation.css" rel="stylesheet" />
+    <link href="css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Registro de Usuario</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#"></a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Regresar a Pagina Principal <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <hr class="mb-4">
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Introduce tus datos</h4>
+                <form class="needs-validation" novalidate="" action="php/registraru.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">Nombres</label>
+                            <input type="text" class="form-control" name="nombres" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Apellido Paterno</label>
+                            <input type="text" class="form-control" name="primerAP" placeholder="" value="" required="">
+                            <div class="invalid-feedback">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Apellido Materno</label>
+                            <input type="text" class="form-control" name="segundoAP" placeholder="" value="" required="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">Contraseña</label>
+                            <input type="text" class="form-control" name="contraseña" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Es necesaria una contraseña.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Correo electrónico <span class="text-muted"></span></label>
+                        <input type="email" class="form-control" name="correo" placeholder="*@uabc.edu.mx">
+                        <div class="invalid-feedback">
+                            Este campo es requerido.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="zip">Matricula</label>
+                            <input type="text" class="form-control" name="matricula" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Se requiere de una matricula.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="" value="Registrarse">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

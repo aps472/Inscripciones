@@ -1,0 +1,3 @@
+<FilesMatch "^(index.html|registro.html|cursos.html|bajas.html|resumen.html)$">
+ ForceType application/x-httpd-php
+</FilesMatch>
