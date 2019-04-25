@@ -3,17 +3,24 @@
 	include 'connection.php';
  
  	$conn = new mysqli($server,$user,$pass,$db) or die ("Error al conectar con la base de datos");
+ 	
+ 	if(isset($_SESSION['SI'])){
+ 		//unset($_SESSION['SI']);
+ 		header("Location: registro.html");
+ 	}else{
+ 		if(isset($_POST['correo']) AND isset($_POST['contraseña'])){
+ 			$usuario=$_POST['correo'];
+ 			$contraseña= $_POST['contraseña'];
+ 			$sql = "SELECT * FROM usuarios_tb WHERE correo_usuario='$usuario' AND password_usuario='$contraseña'";
+ 			$query = $conn->query($sql);
+ 			if($sqlextraido = $query->fetch_assoc()){
+ 				$_SESSION['SI']= $sqlextraido['nombre_usuario'];
+ 				header("Location: registro.html");
 
-	$usuario=$_POST['correo'];
-	$contraseña=$_POST['contraseña'];
- 
-	$sql = "SELECT * FROM usuarios_tb WHERE correo_usuario='$usuario' AND password_usuario='$contraseña'";
-	if($conn->query($sql)){ 
-		$row=mysqli_fetch_array($query);
-		$_SESSION['id']=$row['id'];
-		header('Location: ../registro.html');
-	} else{
-		$_SESSION['message']="User not found!";
-		header('location:index.php');
-	}
+ 			}else{
+ 				$error = "Nombre o contraseña incorrectos";
+ 				header("Location: index.html");
+ 			}
+ 		}
+ 	}
 ?>

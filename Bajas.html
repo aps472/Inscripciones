@@ -7,6 +7,13 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/form-validation.css" rel="stylesheet" />
     <link href="css/dashboard.css" rel="stylesheet" />
+    <?php
+    session_start();
+    if(isset($_SESSION['SI'])){
+    }else{
+        header("Location: index.html");
+    }
+    ?>
 </head>
 
 <body>
@@ -14,7 +21,7 @@
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Dar Curso de Baja</a>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Cerrar Sesion</a>
+                <a class="nav-link" href="php/logout.php">Cerrar Sesion</a>
             </li>
         </ul>
     </nav>

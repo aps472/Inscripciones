@@ -14,6 +14,13 @@
 
 	<link href="css/dashboard.css" rel="stylesheet" />
 
+	<?php
+    session_start();
+    if(isset($_SESSION['SI'])){
+    }else{
+        header("Location: index.html");
+    }
+    ?>
 </head>
 
 
@@ -104,7 +111,7 @@
 
 				<span>Agregar Cursos</span>
 
-				<a class="d-flex align-items-center text-muted" href="php/Altas.php">
+				<a class="d-flex align-items-center text-muted" href="registro.html">
 
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
 
@@ -222,7 +229,7 @@
 
 									<a href="#" class="card-link">Ver</a>
 
-									<a href="php/Bajas.php" class="card-link">Darse de baja</a>
+									<a href="Bajas.html" class="card-link">Darse de baja</a>
 
 								</div>
 

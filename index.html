@@ -1,8 +1,4 @@
-<?php session_start();
-if(isset($_SESSION['id'])) {
-    redirect();
-} ?>
-<html>
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,9 +22,10 @@ if(isset($_SESSION['id'])) {
     </style>
     <!-- Custom styles for this template -->
     <link href="css/singin.css" rel="stylesheet">
+    <?php include "php/login.php"; ?>
 </head>
 <body class="text-center">
-    <form class="form-signin" action="php/login.php" method="POST">
+    <form class="form-signin" action="" method="POST">
         <img class="mb-4" src="imagenes/login.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Inicia sesion</h1>
         <label for="inputEmail" class="sr-only">Correo Electronico</label>
@@ -36,6 +33,14 @@ if(isset($_SESSION['id'])) {
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name="contraseña" required="">
         <div class="checkbox mb-3">
+        <?php
+            if(isset($error)){
+            echo "algo salio mal";
+        ?>
+            <h1 class="h3 mb-3 font-weight-normal"><?php echo $error; ?></h1>
+        <?php
+        }
+        ?>
             <label>
             	<a class="nav-link" href="crear.html">Crear Cuenta :D</a>
             </label>
@@ -43,13 +48,6 @@ if(isset($_SESSION['id'])) {
         <button class="btn btn-lg btn-primary" type="Aceptar">Iniciar Sesion</button>
         <p class="mt-5 mb-3 text-muted">© 2019-2019.5</p>
     </form>
-        <?php
- 
-        if (isset($_SESSION['message'])){
-            echo $_SESSION['message'];
-        }
-        unset($_SESSION['message']);
-    ?>
 </body>
 
 </html>
